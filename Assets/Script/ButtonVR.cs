@@ -44,7 +44,6 @@ public class ButtonVR : MonoBehaviour
             buttonSign.transform.localPosition = new Vector3(1.950179f, -0.02342248f, -0.03257556f);
             onRelease.Invoke();
             isPressed = false;
-            Debug.Log("Button DePressed");
         }
     }
 
