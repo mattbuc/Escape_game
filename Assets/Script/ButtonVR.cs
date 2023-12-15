@@ -5,34 +5,40 @@ using UnityEngine.Events;
 
 public class ButtonVR : MonoBehaviour
 {
-
     public GameObject button;
-    public GameObject buttonSign;
     public UnityEvent onPress;
     public UnityEvent onRelease;
     GameObject presser;
     AudioSource sound;
     bool isPressed;
-
+    float push;
+    public int Amount;
+    Vector3 OriginalPosButton;
 
     // Start is called before the first frame update
     void Start()
     {
         sound = GetComponent<AudioSource>();
         isPressed = false;
+        push = -0.10f;
+        OriginalPosButton = button.transform.localPosition;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (!isPressed)
         {
-            button.transform.localPosition = new Vector3(0, 0, -0.09f);
-            buttonSign.transform.localPosition = new Vector3(1.950179f, -0.02342248f, -0.12f);
-            presser = other.gameObject;
+            button.transform.localPosition = new Vector3(OriginalPosButton.x, OriginalPosButton.y, push);
+            presser = other.gameObject; 
             onPress.Invoke();
             sound.Play();
             isPressed = true;
-            Debug.Log("Button Pressed");
+
+            // Informer le gestionnaire central de l'appui sur ce bouton
+            ButtonManager.Instance.ButtonPressed(this);
+
+
         }
     }
 
@@ -40,15 +46,17 @@ public class ButtonVR : MonoBehaviour
     {
         if (isPressed)
         {
-            button.transform.localPosition = new Vector3(0, 0, 0);
-            buttonSign.transform.localPosition = new Vector3(1.950179f, -0.02342248f, -0.03257556f);
+            button.transform.localPosition = new Vector3(OriginalPosButton.x, OriginalPosButton.y, OriginalPosButton.z);
             onRelease.Invoke();
             isPressed = false;
+
+            // Informer le gestionnaire central du relâchement de ce bouton
+            ButtonManager.Instance.ButtonReleased(this);
+
+            // Debug.Log("Amount: " + Amount);
+
         }
     }
 
-    public void test()
-    {
-        Debug.Log("Button DePressed");
-    }
+
 }
