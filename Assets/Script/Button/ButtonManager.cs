@@ -14,6 +14,11 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject television;
 
+    public GameObject ventilation;
+    AudioSource soundVentilation;
+    Animator animVentilation;
+
+
     private bool isPlaying = true;
 
     // Propriété statique pour l'instance unique du gestionnaire
@@ -58,7 +63,7 @@ public class ButtonManager : MonoBehaviour
         {   
             // lance la vidéo sur la télévision
             Invoke("PlayVideoOnTelevision", 2f);
-
+            Invoke("OpenVent", 2f);
             Debug.Log("Sequence complete! Do something special.");
             // Réinitialisez la liste des boutons pressés pour la prochaine séquence
             pressedButtons.Clear();
@@ -81,6 +86,12 @@ public class ButtonManager : MonoBehaviour
             Invoke("StopVideoOnTelevision", 10f);
         }
 
+    }
+
+    void OpenVent()
+    {
+        ventilation.GetComponent<AudioSource>().Play();
+        ventilation.GetComponent<Animator>().SetBool("isOn", true);
     }
 
     // Méthode appelée après un délai de 10 secondes pour arrêter la vidéo
