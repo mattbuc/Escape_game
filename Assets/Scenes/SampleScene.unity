@@ -1326,7 +1326,7 @@ Transform:
   m_GameObject: {fileID: 594535974}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.143, y: 5.061, z: 2.112}
+  m_LocalPosition: {x: 4.478, y: 5.14, z: 2.112}
   m_LocalScale: {x: 0.5171735, y: 0.6270658, z: 0.6270658}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1364,13 +1364,13 @@ Light:
   m_GameObject: {fileID: 594535974}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 110.7052
+  m_InnerSpotAngle: 102.50728
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -1412,7 +1412,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.8e-44, z: 6.855e-42, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1.058e-42, z: 1.704e-41, w: 4.1003012e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2026,7 +2026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_Type
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_Range
@@ -2037,16 +2037,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
+      propertyPath: m_SpotAngle
+      value: 110.7052
+      objectReference: {fileID: 0}
+    - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_Lightmapping
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 102.5073
+      objectReference: {fileID: 0}
+    - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0.00000016784618
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 6.9e-44
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: -7366557099736932256, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -7029948723529949830, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2059,6 +2071,10 @@ PrefabInstance:
     - target: {fileID: -5743350618785959237, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5543500264016486146, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.743
       objectReference: {fileID: 0}
     - target: {fileID: -4793072877093164865, guid: 1c6af929ee8a8dd42a5cb9615b2c16fe, type: 3}
       propertyPath: m_IsActive
@@ -5822,7 +5838,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 4e-45, z: 1.5215e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -5836,7 +5852,7 @@ Transform:
   m_GameObject: {fileID: 1999931697}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.077729, y: 4.254, z: -1.607}
+  m_LocalPosition: {x: 4.077729, y: 3.801, z: -1.607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
