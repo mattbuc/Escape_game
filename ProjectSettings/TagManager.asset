@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Stone
+  - Glass
+  - Door
+  - Axe
   layers:
   - Default
   - TransparentFX
@@ -15,14 +19,14 @@ TagManager:
   - Interactive
   - Button
   - Wall
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Stone
+  - Vitre
+  - ButtonHide
+  - Ball
+  - Axe1
+  - Axe2
+  - DoorEnd
+  - Respawn
   - 
   - 
   - 

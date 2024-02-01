@@ -3,7 +3,77 @@ guid: 1c6af929ee8a8dd42a5cb9615b2c16fe
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GRAY
+    second: {fileID: 2100000, guid: bc0e9c8aabeb4b84cb7ff237b1de410c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: c42e4e5affa390c47bf918886e4be66a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 53bee777a298ff7469582c3cb15cdcb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Poubelle
+    second: {fileID: 2100000, guid: c0aa95ee2bb24944b90da8ef935798dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toit
+    second: {fileID: 2100000, guid: 7df2e2db27c71b3408aaa563178da104, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bone multi material_
+    second: {fileID: 2100000, guid: ce99cca100c8dda419356db2a19badfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chrome
+    second: {fileID: 2100000, guid: 8bfd51db65b32e54bb8d94cda0727668, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes_light
+    second: {fileID: 2100000, guid: 4ceeb6f249aa53a4d92e322013c34188, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kindpng_1178585.003
+    second: {fileID: 2100000, guid: fa825bf640cbf4e45a25f5a8b90dd1b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light
+    second: {fileID: 2100000, guid: 5122e7c91f8ad2c4d92d6ec73b87460d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: porcelain white
+    second: {fileID: 2100000, guid: ef81adc15d033b04e9887786afd3cdae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red
+    second: {fileID: 2100000, guid: c6514ead28d72c54bb3f5f3e3abf14af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u3010AmbCG\u3011Porcelain002"
+    second: {fileID: 2100000, guid: 94e60b7133a5d2c47856bf91d3fdf3e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u3010ShareTx\u3011Silver"
+    second: {fileID: 2100000, guid: 68d7befc13fd5a442891983bad0c5d95, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
