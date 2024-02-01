@@ -26,6 +26,9 @@ public class ButtonManager : MonoBehaviour
     AudioSource audioSource;
     public AudioClip zambla;
 
+    public GameObject goodSound;
+    public GameObject badSound;
+
     private bool isPlaying = true;
 
     // Propriété statique pour l'instance unique du gestionnaire
@@ -68,7 +71,8 @@ public class ButtonManager : MonoBehaviour
         // Vérifiez si la séquence actuelle correspond à la séquence cible
         if (currentSequence.SequenceEqual(targetSequence))
         {   
-
+            audioSource = goodSound.GetComponent<AudioSource>();
+            audioSource.Play();
             Invoke("OpenVent", 2f);
             Invoke("FallAxe", 3f);
             Debug.Log("Sequence complete! Do something special.");
@@ -77,7 +81,8 @@ public class ButtonManager : MonoBehaviour
         }
         else if (currentSequence.SequenceEqual(trollSequence))
         {
-            
+            audioSource = goodSound.GetComponent<AudioSource>();
+            audioSource.Play();
             Invoke("PlayVideoOnTelevision", 2f);
             Debug.Log("Sequence troll! Do something special.");
             pressedButtons.Clear();
@@ -108,6 +113,8 @@ public class ButtonManager : MonoBehaviour
         }
         else if (currentSequence.Count >= targetSequence.Count)
         {
+            audioSource = badSound.GetComponent<AudioSource>();
+            audioSource.Play();
             Debug.Log("Sequence failed! Try again.");
             // Réinitialisez la liste des boutons pressés pour la prochaine séquence
             pressedButtons.Clear();
