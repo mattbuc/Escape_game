@@ -33,22 +33,13 @@ public class SpawnBall : MonoBehaviour
 
     private void respawn()
     {
-        Rigidbody bouleRigidbody = boule.GetComponent<Rigidbody>();
 
-        if (bouleRigidbody.isKinematic == false)
-        {
-            bouleRigidbody.isKinematic = true;
-            bouleRigidbody.useGravity = false;
+
             boule.transform.localPosition = new Vector3(OriginalPosBoule.x, OriginalPosBoule.y, OriginalPosBoule.z);
-            Invoke("Fall", 2f);
+
         }
 
-    }
+    
 
-    void Fall()
-    {
-        Rigidbody bouleRigidbody = boule.GetComponent<Rigidbody>();
-        bouleRigidbody.isKinematic = false;
-        bouleRigidbody.useGravity = true;
-    }
+
 }

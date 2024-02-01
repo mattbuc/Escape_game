@@ -8,8 +8,12 @@ public class Breakable : MonoBehaviour
 {
     
     [SerializeField] GameObject glass;
-    [SerializeField] GameObject brokenGlass;
+    public GameObject brokenGlass;
+    public GameObject allGlass;
+    AudioSource audioSource;
+
     public GameObject stone;
+
 
     BoxCollider boxCollider;
 
@@ -17,6 +21,8 @@ public class Breakable : MonoBehaviour
     {
         glass.SetActive(true);
         brokenGlass.SetActive(false);
+
+        audioSource = brokenGlass.GetComponent<AudioSource>();
 
         boxCollider = GetComponent<BoxCollider>();
     }
@@ -33,6 +39,8 @@ public class Breakable : MonoBehaviour
 
     private void Break()
     {
+        
+        allGlass.GetComponent<AudioSource>().Play();
         glass.SetActive(false);
         brokenGlass.SetActive(true);
         boxCollider.enabled = false;
