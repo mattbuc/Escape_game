@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Stone
   - Glass
+  - Door
+  - Axe
   layers:
   - Default
   - TransparentFX
@@ -21,10 +23,10 @@ TagManager:
   - Vitre
   - ButtonHide
   - Ball
-  - 
-  - 
-  - 
-  - 
+  - Axe1
+  - Axe2
+  - DoorEnd
+  - Respawn
   - 
   - 
   - 

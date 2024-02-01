@@ -19,6 +19,8 @@ public class ButtonManager : MonoBehaviour
     AudioSource soundVentilation;
     Animator animVentilation;
 
+    public GameObject lameHache;
+
 
     private bool isPlaying = true;
 
@@ -64,6 +66,7 @@ public class ButtonManager : MonoBehaviour
         {   
 
             Invoke("OpenVent", 2f);
+            Invoke("FallAxe", 3f);
             Debug.Log("Sequence complete! Do something special.");
             // Réinitialisez la liste des boutons pressés pour la prochaine séquence
             pressedButtons.Clear();
@@ -99,6 +102,24 @@ public class ButtonManager : MonoBehaviour
     {
         ventilation.GetComponent<AudioSource>().Play();
         ventilation.GetComponent<Animator>().SetBool("isOn", true);
+
+
+    }
+
+    void FallAxe()
+    {
+    // Récupérez le composant Rigidbody de la lame de la hache
+    Rigidbody lameRigidbody = lameHache.GetComponent<Rigidbody>();
+
+    // Assurez-vous que le composant Rigidbody est présent
+    if (lameRigidbody != null)
+    {
+        // Désactivez la propriété isKinematic
+        lameRigidbody.isKinematic = false;
+
+        // Activez la gravité
+        lameRigidbody.useGravity = true;
+    }
 
     }
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class ButtonHide : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class ButtonHide : MonoBehaviour
     bool isPressed;        
     float push;
     Vector3 OriginalPosButton;
+    public GameObject mancheHache;
 
     void Start()
     {
@@ -33,9 +36,7 @@ public class ButtonHide : MonoBehaviour
             onPress.Invoke();
             sound.Play();
             isPressed = true;
-            Invoke("GrosSex", 1f);
-
-
+            Invoke("MancheHache", 1f);
         }
     }
 
@@ -49,8 +50,20 @@ public class ButtonHide : MonoBehaviour
         }
     }
 
-    public void GrosSex()
+    void MancheHache()
     {
-        Debug.Log("proute");
+            Rigidbody mancheRigidbody = mancheHache.GetComponent<Rigidbody>();
+
+    // Assurez-vous que le composant Rigidbody est présent
+    if (mancheRigidbody != null)
+    {
+        // Désactivez la propriété isKinematic
+        mancheRigidbody.isKinematic = false;
+
+        // Activez la gravité
+        mancheRigidbody.useGravity = true;
+        Debug.Log("Manche de hache récupéré");
+        
+    }
     }
 }
