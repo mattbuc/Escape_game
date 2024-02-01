@@ -11,6 +11,8 @@ public class BreakingDoor : MonoBehaviour
     [SerializeField] GameObject doorBroken1;
     [SerializeField] GameObject doorBroken2;
     [SerializeField] GameObject doorBroken3;
+    public GameObject doorSound;
+    AudioSource audioSource;
     public GameObject Axe;
 
     BoxCollider boxCollider;
@@ -24,6 +26,8 @@ public class BreakingDoor : MonoBehaviour
         doorBroken3.SetActive(false);
 
         boxCollider = GetComponent<BoxCollider>();
+
+        audioSource = doorSound.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider Axe)
@@ -43,6 +47,7 @@ public class BreakingDoor : MonoBehaviour
 
         if (door.activeSelf == true)
         {
+            doorSound.GetComponent<AudioSource>().Play();
             door.SetActive(false);
             doorBroken1.SetActive(true);
             Debug.Log("premiere porte!");
@@ -50,6 +55,7 @@ public class BreakingDoor : MonoBehaviour
         }
         else if (doorBroken1.activeSelf == true)
         {
+            doorSound.GetComponent<AudioSource>().Play();
             doorBroken1.SetActive(false);
             doorBroken2.SetActive(true);
             Debug.Log("Deuxieme porte!");
@@ -57,6 +63,7 @@ public class BreakingDoor : MonoBehaviour
         }
         else if (doorBroken2.activeSelf == true)
         {
+            doorSound.GetComponent<AudioSource>().Play();
             doorBroken2.SetActive(false);
             doorBroken3.SetActive(true);
             Debug.Log("Troisieme porte!");
@@ -64,6 +71,7 @@ public class BreakingDoor : MonoBehaviour
         }
         else if (doorBroken3.activeSelf == true)
         {
+            doorSound.GetComponent<AudioSource>().Play();
             doorBroken3.SetActive(false);
             boxCollider.enabled = false;
             Debug.Log("Troisieme porte!");

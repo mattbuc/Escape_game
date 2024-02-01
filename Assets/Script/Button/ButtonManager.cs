@@ -11,7 +11,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     private List<ButtonVR> pressedButtons = new List<ButtonVR>();
     private List<int> targetSequence = new List<int> { 6, 1, 5, 9};
-    private List<int> trollSequence = new List<int> { 1, 2, 3 ,4};
+    private List<int> trollSequence = new List<int> { 1, 2, 3, 4};
+    private List<int> changeSound = new List<int> { 0, 0, 0, 0};
 
     public GameObject television;
 
@@ -21,6 +22,9 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject lameHache;
 
+    public GameObject ambiance;
+    AudioSource audioSource;
+    public AudioClip zambla;
 
     private bool isPlaying = true;
 
@@ -78,7 +82,31 @@ public class ButtonManager : MonoBehaviour
             Debug.Log("Sequence troll! Do something special.");
             pressedButtons.Clear();
         }
-                else if (currentSequence.Count >= targetSequence.Count)
+
+        else if (currentSequence.SequenceEqual(changeSound))
+        {
+            audioSource = ambiance.GetComponent<AudioSource>();
+
+            // Vérifiez que le composant AudioSource existe
+            if (audioSource != null)
+            {
+                // Changez la piste audio du AudioSource
+                audioSource.clip = zambla;
+                
+                // Jouez la nouvelle piste audio
+                audioSource.Play();
+                
+                Debug.Log("Sequence change sound! Do something special.");
+            }
+            else
+            {
+                Debug.LogWarning("La piste audio n'a pas été trouvée dans le dossier 'Audio'.");
+            }
+
+            // Réinitialisez la liste des boutons pressés pour la prochaine séquence
+            pressedButtons.Clear();
+        }
+        else if (currentSequence.Count >= targetSequence.Count)
         {
             Debug.Log("Sequence failed! Try again.");
             // Réinitialisez la liste des boutons pressés pour la prochaine séquence
